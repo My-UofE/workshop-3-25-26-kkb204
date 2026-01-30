@@ -14,9 +14,12 @@ public class AverageSquares {
 
         double num_of_squares = (endNum - startNum)+1;
         double total = 0;
-        for (int i = startNum; i <= endNum; ++i) {
-            total += (i*i);
-        }
+        int i = 0;
+        do {
+            total += i*i;
+            ++i;
+        } while (i <= endNum);
+        
         double average = total / num_of_squares;
         System.out.println(average);
     }
